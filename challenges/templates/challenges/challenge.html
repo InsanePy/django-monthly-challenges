@@ -2,10 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Monthly Challenge</title>
+    <title>{{ title }}</title>
 </head>
 <body>
-<h1>This month's challenge</h1>
-<h2>Go</h2>
+<h1>{{ month_name|title }} Challenge</h1>
+{% if  text  is not None %}
+<h2> {{ text }}</h2>
+{% else %}
+<p> There is no challenge for this month yet</p>
+{% endif %}
 </body>
 </html>
